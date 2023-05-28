@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body>
+    <div id="homepage">
+      <div id="logo">
+        <h1>HidGemsIndo</h1>
+      </div>
+      <div id="menu">
+        <ul>
+          <li>
+            <a href="index.html" onclick="navigate('index')">Home</a>
+            <a href="about.html" onclick="navigate('about')">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="pengurus">
+      <a href="https://www.instagram.com/joy_rockniel/"><img src="WhatsApp Image 2023-04-03 at 17.38.31.jpg" alt="Joy">
+         <h3>Joy Rockniel Abadi</h3>
+         <p>Infomatika 2022</p>
+    </div>
+
+    <div class="pengurus">
+      <a href="https://www.instagram.com/matthewchang20/"><img src="WhatsApp Image 2023-04-03 at 21.03.11.jpg" alt="Matthew">
+         <h3>Matthew Chang</h3>
+         <p>Informatika 2022</p>
+    </div>
+
+    <div class="pengurus">
+      <a href="https://www.instagram.com/wilbert_b32/"><img src="WhatsApp Image 2023-04-03 at 19.57.08.jpg" alt="Webe">
+         <h3>Wilbert Bernardi</h3>
+         <p>Informatika 2022</p>
+    </div>
+
+    <div class="pengurus">
+      <a href="https://www.instagram.com/raka_s.w.a.t/"><img src="WhatsApp Image 2023-04-03 at 17.38.32.jpg" alt="Raka">
+         <h3>Raka Satya Wurya Andhika</h3>
+         <p>Informatika 2022</p>
+    </div>
+
+    <script>
+      function navigate(page) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("content").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", page + ".html", true);
+        xhttp.send();
+      }
+    </script>
+  </body>
+</html>
